@@ -1,51 +1,4 @@
-# python main.py --target_class african_crocodile --source_dir sourceDir --working_dir workingDir --model_name googlenet --labels_path imagenet_class_index.json
-
-# python ACE-tensorflow/ace_run.py --num_parallel_runs 0 --target_class african_crocodile --source_dir sourceDir --working_dir workingDir --model_to_run GoogleNet --model_path ./tensorflow_inception_graph.pb --labels_path ./imagenet_labels.txt --bottlenecks mixed4c --num_random_exp 40 --max_imgs 50 --min_imgs 30
-
-# time python ACE-tensorflow/ace_run.py \
-#   --num_parallel_workers 8 \
-#   --target_class african_crocodile \
-#   --source_dir ACE-tensorflow/sourceDir \
-#   --working_dir workingDir \
-#   --model_to_run GoogleNet \
-#   --model_path ACE-tensorflow/tensorflow_inception_graph.pb \
-#   --labels_path ACE-tensorflow/imagenet_labels.txt \
-#   --bottlenecks mixed4c \
-#   --num_random_exp 40 \
-#   --max_imgs 50 \
-#   --min_imgs 30
-# python ./downloader.py \
-#     -data_root ../../imagenet_dataset \
-#     -number_of_classes 250 \
-#     -images_per_class 200
-
-# time python ./downloader.py \
-#     -data_root ../../imagenet_dataset \
-#     -number_of_classes 250
-
-# time python ./download_test.py \
-#     -data_root ../../imagenet_dataset \
-#     -number_of_classes 1
-
-# ace_pytorch/ImageNet-Downloader
-
-# mkdir -p /path/to/destination_folder
-# find /path/to/source/folders -type f | xargs -I {} cp {} /path/to/destination_folder
-
-# time python ACE-tensorflow/ace_run.py \
-#   --num_parallel_workers 8 \
-#   --target_class female_asian \
-#   --source_dir ACE-tensorflow/sourceDir \
-#   --working_dir workingDir \
-#   --model_to_run InceptionV3 \
-#   --model_path ACE-tensorflow/tensorflow_inception_graph.pb \
-#   --labels_path ACE-tensorflow/imagenet_labels.txt \
-#   --bottlenecks mixed4c \
-#   --num_random_exp 30 \
-#   --max_imgs 200 \
-#   --min_imgs 70
-
-
+bash data/sourceDir/randomImageMover.sh
 
 time python ace_run.py \
   --num_parallel_workers 8 \
@@ -60,6 +13,6 @@ time python ace_run.py \
   --max_imgs 200 \
   --min_imgs 70
 
-bash data/sourceDir/randomImageMover.sh
+
 
 
